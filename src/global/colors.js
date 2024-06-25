@@ -7,5 +7,5 @@ export const colors = {
     green900: "#0D3F35",
     gray100: "#E0E1DD",
     black: "#000003",
-    white: "#fffff3"
+    white: "#ffffff"
   };

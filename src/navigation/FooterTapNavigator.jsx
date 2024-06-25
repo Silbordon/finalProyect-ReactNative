@@ -2,6 +2,9 @@ import { StyleSheet, Text, View } from 'react-native'
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeStackNavigator from './HomeStackNavigator'
+import AdoptionStackNavigator from './AdoptionStackNavigator'
+import DonationsStackNavigator from './DonationsStackNavigator'
+import AboutUsStackNavigator from './AboutUsStackNavigator'
 // import CartStackNavigator from './CartStackNavigator'
 // import OrderStackNavigator from './OrderStackNavigator'
 
@@ -15,6 +18,8 @@ import Header from '../components/Header'
 import { colors } from '../global/colors'
 
 import { FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome6 } from '@expo/vector-icons';
+
 
 const Tab = createBottomTabNavigator()
 
@@ -36,42 +41,51 @@ const FooterTapNavigator = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <View>
-                <FontAwesome5 name="store" size={24} color={focused ? "black" : colors.lightGray} />
+                <FontAwesome5 name="home" size={28}color={focused ? "black" : colors.lightGray} />
               </View>
             );
           },
         }}
       />
-      {/* <Tab.Screen
-        name="Cart"
-        component={CartStackNavigator}
+      <Tab.Screen
+        name="Adopciones"
+        component={AdoptionStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
               <View>
-                <FontAwesome5 name="shopping-cart" size={24} color={focused ? "black" : colors.lightGray} />
+                <FontAwesome6 name="shield-dog" size={28} color={focused ? "black" : colors.lightGray} />
               </View>
             );
           },
         }}
-      /> */}
-      {/* <Tab.Screen
-        name="Order"
-        component={OrderStackNavigator}
+      />
+      <Tab.Screen
+        name="Donations"
+        component={DonationsStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
               <View>
-                <FontAwesome5
-                  name="receipt"
-                  size={24}
-                  color={focused ? "black" : colors.lightGray}
-                />
+                <FontAwesome5 name="hand-holding-heart"  size={28} color={focused ? "black" : colors.lightGray} />
               </View>
             );
           },
         }}
-      /> */}
+      />
+      <Tab.Screen
+        name="AboutUs"
+        component={AboutUsStackNavigator}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <View>
+                <FontAwesome5 name="users"  size={28} color={focused ? "black" : colors.lightGray} />
+              </View>
+            );
+          },
+        }}
+      />
     </Tab.Navigator>
   );
 }
@@ -81,6 +95,6 @@ export default FooterTapNavigator
 const styles = StyleSheet.create({
     tabBar: {
         backgroundColor: colors.green700,
-        height: 60
+        height: 55
     }
 })
