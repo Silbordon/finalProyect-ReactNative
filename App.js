@@ -1,7 +1,13 @@
 import { useCallback } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
+import { StyleSheet, View, SafeAreaView, StatusBar, Platform, Text } from "react-native";
+import { colors } from "./src/global/colors";
+
+import Navigator from "./src/navigation/navigator";
+
+// import { Provider } from "react-redux";
+// import store from "./src/store";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -25,20 +31,29 @@ export default function App() {
 
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>
-      <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 30 }}>Inter Black</Text>
-      <Text style={{ fontFamily: 'Poppins-ExtraLighItalic', fontSize: 30 }}>Inter Black</Text>
-      <Text style={{ fontFamily: 'Poppins-Light', fontSize: 30 }}>Inter Black</Text>
-      <Text style={{ fontFamily: 'Poppins-Regular', fontSize: 30 }}>Inter Black</Text>
-      <Text style={{ fontSize: 20 }}>Platform Default</Text>
+       <SafeAreaView style={styles.container}>
+      {/* <Provider store={store}> */}
+        <Navigator />
+      {/* </Provider> */}
+    </SafeAreaView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: colors.lightGray,
   },
 });
+
+
+
+
+
+
+  
+
+
 
