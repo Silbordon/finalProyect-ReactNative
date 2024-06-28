@@ -1,24 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeStackNavigator from './HomeStackNavigator'
 import AdoptionStackNavigator from './AdoptionStackNavigator'
 import DonationsStackNavigator from './DonationsStackNavigator'
 import AboutUsStackNavigator from './AboutUsStackNavigator'
-// import CartStackNavigator from './CartStackNavigator'
-// import OrderStackNavigator from './OrderStackNavigator'
-
-
-/* import Cart from '../screens/Cart'
-import Order from '../screens/Order' */
-//import { Header } from 'react-native/Libraries/NewAppScreen'
-
 
 import Header from '../components/Header'
 import { colors } from '../global/colors'
 
 import { FontAwesome5 } from "@expo/vector-icons";
 import { FontAwesome6 } from '@expo/vector-icons';
+
 
 
 const Tab = createBottomTabNavigator()
@@ -48,7 +41,7 @@ const FooterTapNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Adopciones"
+        name="Adoptions"
         component={AdoptionStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => {

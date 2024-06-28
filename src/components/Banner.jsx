@@ -5,7 +5,7 @@ import { colors } from "../global/colors";
 // import { NavigationProp, useNavigation } from "@react-navigation/native";
 
 
-const Banner = () => {
+const Banner = ({navigation}) => {
   return (
     <View style={styles.containerBanner}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -16,7 +16,7 @@ const Banner = () => {
             source={require("../../assets/images/dog3.jpeg")}
           />
           <Pressable
-            onPress={() => console.log("sil banner")}
+            onPress={() => navigation.navigate('Adoptions')}
             style={({ pressed }) => ({
               opacity: pressed ? 0.9 : 1,
             })
@@ -31,7 +31,7 @@ const Banner = () => {
             source={require("../../assets/images/gatoperro.jpeg")}
           />
           <Pressable
-            onPress={() => console.log("sil banner")}
+            onPress={() => navigation.navigate('Donations')}
             style={({ pressed }) => ({
               marginHorizontal: 4,
               paddingBottom: 20,
@@ -49,7 +49,7 @@ const Banner = () => {
             source={require("../../assets/images/nosotros.jpeg")}
           />
           <Pressable
-            onPress={() => console.log("sil banner")}
+            onPress={() => navigation.navigate('AboutUs')}
             style={({ pressed }) => ({
               marginHorizontal: 4,
               paddingBottom: 20,
@@ -67,7 +67,7 @@ const Banner = () => {
             source={require("../../assets/images/gatos2.jpeg")}
           />
           <Pressable
-            onPress={() => console.log("sil banner")}
+            onPress={() => navigation.navigate('Adoptions')}
             style={({ pressed }) => ({
               marginHorizontal: 4,
               paddingBottom: 20,
