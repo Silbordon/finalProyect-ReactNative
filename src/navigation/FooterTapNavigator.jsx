@@ -34,7 +34,7 @@ const FooterTapNavigator = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <View>
-                <FontAwesome5 name="home" size={28}color={focused ? "black" : colors.lightGray} />
+                <FontAwesome5 name="home" size={28} color={focused ? "black" : colors.lightGray} />
               </View>
             );
           },
@@ -60,7 +60,7 @@ const FooterTapNavigator = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <View>
-                <FontAwesome5 name="hand-holding-heart"  size={28} color={focused ? "black" : colors.lightGray} />
+                <FontAwesome5 name="hand-holding-heart" size={28} color={focused ? "black" : colors.lightGray} />
               </View>
             );
           },
@@ -73,7 +73,7 @@ const FooterTapNavigator = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <View>
-                <FontAwesome5 name="users"  size={28} color={focused ? "black" : colors.lightGray} />
+                <FontAwesome5 name="users" size={28} color={focused ? "black" : colors.lightGray} />
               </View>
             );
           },
@@ -86,8 +86,8 @@ const FooterTapNavigator = () => {
 export default FooterTapNavigator
 
 const styles = StyleSheet.create({
-    tabBar: {
-        backgroundColor: colors.green700,
-        height: 55
-    }
+  tabBar: {
+    backgroundColor: colors.green700,
+    height: 55
+  }
 })
