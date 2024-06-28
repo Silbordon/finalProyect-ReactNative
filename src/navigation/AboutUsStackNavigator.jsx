@@ -1,14 +1,26 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet} from 'react-native'
 import React from 'react'
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import AboutUs from '../screens/AboutUs'
+
+const Stack = createNativeStackNavigator();
 
 const AboutUsStackNavigator = () => {
   return (
-    <View>
-      <Text>AboutUsStackNavigator</Text>
-    </View>
+    <Stack.Navigator
+            initialRouteName="AboutUsScreen"
+            screenOptions={{headerShown: false}}
+          >
+            <Stack.Screen name="AboutUsScreen" component={AboutUs} />
+          </Stack.Navigator>
   )
 }
 
 export default AboutUsStackNavigator
 
 const styles = StyleSheet.create({})
+
+
+
+
+
